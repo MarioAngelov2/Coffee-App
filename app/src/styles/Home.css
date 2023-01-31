@@ -1,0 +1,48 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerContainer {
+  width: auto;
+  margin-left: 800px;
+}
+
+.headerContainer h1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  font-family: sans-serif;
+  font-size: 75px;
+}
+
+.headerContainer button {
+  border: none;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+}
+
+
+.headerContainer button:hover {
+  background-color: rgb(193, 23, 23);
+  border-radius: 5px;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
