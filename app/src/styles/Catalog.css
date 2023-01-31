@@ -1,0 +1,53 @@
+/* Overal page */
+
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.menu .catalogTitle {
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+.catalogList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+/* Catalog items */
+
+.catalogItem {
+  width: 300px;
+  height: 450px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 20px rgb(225, 225, 225);
+}
+
+.catalogItem div {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.catalogItem:hover {
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  box-shadow: 0px 1px 20px rgb(163, 163, 163);
+}
+
+.catalogItem h1, p {
+  margin-left: 20px;
+}
