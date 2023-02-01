@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/catalog" exact element={<Catalog />} />
         <Route path="/login" exact element={<Login />} />
+        <Route path="/register" exact element={<Register />} />
       </Routes>
       <Footer />
     </div>
