@@ -15,6 +15,7 @@ function Catalog() {
             image={catalogItem.image}
             name={catalogItem.name}
             price={catalogItem.price}
+            id={catalogItem.id}
           />
         )
       })}

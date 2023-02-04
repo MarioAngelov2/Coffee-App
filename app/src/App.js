@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Details from "./pages/Details";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/catalog" exact element={<Catalog />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/register" exact element={<Register />} />
+        <Route path="/details" exact element={<Details />} />
       </Routes>
       <Footer />
     </div>
