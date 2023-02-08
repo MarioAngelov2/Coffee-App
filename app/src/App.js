@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
+import { catalogItemContext } from "./context/catalogItemContext";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -19,7 +20,7 @@ function App() {
         <Route path="/catalog" exact element={<Catalog />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/register" exact element={<Register />} />
-        <Route path="/details" exact element={<Details />} />
+        <Route path="/details:id" exact element={<Details />} />
       </Routes>
       <Footer />
     </div>

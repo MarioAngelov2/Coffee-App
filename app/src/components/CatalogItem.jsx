@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
+import { catalogItemContext } from "../context/catalogItemContext";
 
 function CatalogItem({ image, name, price, id }) {
 
