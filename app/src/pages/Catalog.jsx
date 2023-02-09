@@ -5,6 +5,7 @@ import CatalogItem from "../components/CatalogItem";
 import '../styles/Catalog.css';
 
 function Catalog() {
+
   return <div className="menu">
     <h1 className="catalogTitle">Our Products</h1>
     <div className="catalogList">
