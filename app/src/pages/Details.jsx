@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import CatalogItem from "../components/CatalogItem";
 import { catalogList } from "../helpers/catalogList";
-import '../styles/Details.css';
+import "../styles/Details.css";
 
-function Details({
-  props
-}) {
-
+function Details({}) {
   return (
     <div className="details">
       <div className="itemDetails">
-       <h1></h1>
-       <h2>mario</h2>
+        <h1>Mario</h1>
       </div>
     </div>
   );
