@@ -11,21 +11,15 @@ import Register from "./pages/Register";
 import Details from "./pages/Details";
 import About from "./pages/About";
 
-import { catalogList } from "./helpers/catalogList";
 
 import { useState } from "react";
 import { catalogItemContext } from "./context/catalogItemContext";
 
 function App() {
 
-  const [itemInfo, setItemInfo] = useState({});
-
-  const itemInfoHandler = (info) => {
-    setItemInfo(info);
-  }
+  
 
   return (
-    <catalogItemContext.Provider value={{itemInfo, itemInfoHandler}}>
       <div className="App">
         <Navbar />
         <Routes>
@@ -38,7 +32,6 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </catalogItemContext.Provider>
   );
 }
 
