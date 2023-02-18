@@ -1,6 +1,8 @@
 import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
+import { AuthContext } from "./context/AuthContext";
+import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,15 +13,16 @@ import Register from "./pages/Register";
 import Details from "./pages/Details";
 import About from "./pages/About";
 
-
-import { useState } from "react";
-import { catalogItemContext } from "./context/catalogItemContext";
-
 function App() {
 
-  
+  const [auth, setAuth] = useState({})
+
+  const userLogin = (authData) => {
+    setAuth(authData)
+  }
 
   return (
+    <AuthContext.Provider value={{auth, userLogin}}>
       <div className="App">
         <Navbar />
         <Routes>
@@ -32,6 +35,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+    </AuthContext.Provider>
   );
 }
 

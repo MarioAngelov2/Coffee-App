@@ -2,10 +2,13 @@ import React from "react";
 import "../styles/Login.css";
 import loginImage from "../assets/loginImage.jpeg";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
-import { login } from "../services/authService";
+import * as authService from "../services/authService";
+import { AuthContext } from "../context/AuthContext";
 
 function Login() {
+  const { userLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmit = (ev) => {
@@ -13,9 +16,10 @@ function Login() {
 
     const { email, password } = Object.fromEntries(new FormData(ev.target));
 
-    login(email, password)
+    authService.login(email, password)
       .then((authData) => {
-        console.log(authData);
+        userLogin(authData);
+        navigate("/");
       })
       .catch(() => {
         navigate("/");
