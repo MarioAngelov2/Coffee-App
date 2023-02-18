@@ -10,7 +10,7 @@ const request = async (method, url, data) => {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
     }
 

@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Details from "./pages/Details";
 import About from "./pages/About";
+import Logout from "./components/Logout";
 
 function App() {
 
@@ -21,8 +22,12 @@ function App() {
     setAuth(authData)
   }
 
+  const userLogout = () => {
+    setAuth({});
+  }
+
   return (
-    <AuthContext.Provider value={{user: auth, userLogin}}>
+    <AuthContext.Provider value={{user: auth, userLogin, userLogout}}>
       <div className="App">
         <Navbar />
         <Routes>
@@ -32,6 +37,7 @@ function App() {
           <Route path="/register" exact element={<Register />} />
           <Route path="/details/:id" exact element={<Details />} />
           <Route path="/about" exact element={<About />} />
+          <Route path="/logout" exact element={<Logout />} />
         </Routes>
         <Footer />
       </div>
