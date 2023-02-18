@@ -1,17 +1,16 @@
-export const request = async (method, url, data) => {
+const request = async (method, url, data) => {
   try {
     let buildRequest;
 
     if (method === "GET") {
       buildRequest = fetch(url);
-    }
-    {
+    } else {
       buildRequest = fetch(url, {
         method,
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       });
     }
 

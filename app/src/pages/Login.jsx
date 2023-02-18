@@ -1,20 +1,25 @@
 import React from "react";
 import "../styles/Login.css";
 import loginImage from "../assets/loginImage.jpeg";
+import { useNavigate } from "react-router-dom";
+
 import { login } from "../services/authService";
 
 function Login() {
+  const navigate = useNavigate();
+
   const onSubmit = (ev) => {
     ev.preventDefault();
 
-    const { username, password } = Object.fromEntries(new FormData(ev.target));
+    const { email, password } = Object.fromEntries(new FormData(ev.target));
 
-    login(username, password).then((authData) => {
-      console.log(authData);
-    })
-      .catch(() => {
-        
+    login(email, password)
+      .then((authData) => {
+        console.log(authData);
       })
+      .catch(() => {
+        navigate("/");
+      });
   };
 
   return (
@@ -27,7 +32,7 @@ function Login() {
         <h1>Login</h1>
         <form id="login-form" method="POST" onSubmit={onSubmit}>
           <label htmlFor="username">Username:</label>
-          <input name="username" placeholder="Enter username..." type="email" />
+          <input name="email" placeholder="Enter username..." type="email" />
           <label htmlFor="password">Password:</label>
           <input
             name="password"
