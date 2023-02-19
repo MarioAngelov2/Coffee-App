@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
-function CatalogItem({ image, name, price, id }) {
+function CatalogItem({coffee}) {
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
+  // onClick={() => {navigate(`/details/${id}`)}}
  
   return (
-    <div className="catalogItem" onClick={() => {navigate(`/details/${id}`)}}>
-      <div style={{ backgroundImage: `url(${image})` }}></div>
-      <h1> {name} </h1>
-      <p> ${price} </p>
+    <div className="catalogItem">
+      <div style={{ backgroundImage: `url(${coffee.image})` }}></div>
+      <h1> {coffee.name} </h1>
+      <p> ${coffee.price} </p>
+      <Link to={`/details/${coffee.id}`}>Details</Link>
     </div>
   );
 }

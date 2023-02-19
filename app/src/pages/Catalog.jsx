@@ -2,26 +2,19 @@ import React from "react";
 
 import { catalogList } from "../helpers/catalogList";
 import CatalogItem from "../components/CatalogItem";
-import '../styles/Catalog.css';
+import "../styles/Catalog.css";
 
-function Catalog() {
-
-  return <div className="menu">
-    <h1 className="catalogTitle">Our Products</h1>
-    <div className="catalogList">
-      {catalogList.map((catalogItem, key) => {
-        return (
-          <CatalogItem 
-            key={key}
-            image={catalogItem.image}
-            name={catalogItem.name}
-            price={catalogItem.price}
-            id={catalogItem.id}
-          />
-        )
-      })}
+function Catalog({ coffeInfo }) {
+  return (
+    <div className="menu">
+      <h1 className="catalogTitle">Our Products</h1>
+      <div className="catalogList">
+        {coffeInfo.map((item) => {
+          return <CatalogItem key={item.id} coffee={item} />;
+        })}
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default Catalog;

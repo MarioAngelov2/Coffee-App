@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import CatalogItem from "../components/CatalogItem";
-import { catalogList } from "../helpers/catalogList";
+import { useParams } from "react-router-dom";
 import "../styles/Details.css";
 
-function Details({}) {
+function Details({ coffeInfo }) {
+  console.log('coffeInfo', coffeInfo)
+  const { coffeeId } = useParams();
+
+  const coffee = coffeInfo.find(x => x.id === coffeeId);
+  console.log('coffee', coffee)
+
   return (
     <div className="details">
       <div className="itemDetails">
-        <h1>Mario</h1>
+        <h1>{coffee.price}</h1>
       </div>
     </div>
   );

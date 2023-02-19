@@ -14,7 +14,12 @@ import Details from "./pages/Details";
 import About from "./pages/About";
 import Logout from "./components/Logout";
 
+import { catalogList } from "./helpers/catalogList";
+
+
 function App() {
+
+  const [coffeInfo, setCoffeInfo] = useState(catalogList);
 
   const [auth, setAuth] = useState({})
 
@@ -32,10 +37,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/catalog" exact element={<Catalog />} />
+          <Route path="/catalog" exact element={<Catalog coffeInfo={coffeInfo} />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
-          <Route path="/details/:id" exact element={<Details />} />
+          <Route path="/details/:id" exact element={<Details coffeInfo={coffeInfo}/>} />
           <Route path="/about" exact element={<About />} />
           <Route path="/logout" exact element={<Logout />} />
         </Routes>
