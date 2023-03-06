@@ -36,13 +36,13 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/catalog" exact element={<Catalog coffeInfo={coffeInfo} />} />
-          <Route path="/login" exact element={<Login />} />
-          <Route path="/register" exact element={<Register />} />
-          <Route path="/details/:id" exact element={<Details coffeInfo={coffeInfo}/>} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/logout" exact element={<Logout />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog coffeInfo={coffeInfo} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/details/:id" element={<Details coffeInfo={coffeInfo}/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
         <Footer />
       </div>
