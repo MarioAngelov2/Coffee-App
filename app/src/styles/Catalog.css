@@ -7,13 +7,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .menu .catalogTitle {
   font-size: 50px;
   font-weight: 300;
-  font-family: sans-serif;
+  margin-bottom: 50px;
 }
 
 .catalogList {
@@ -23,6 +22,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
 }
+
 
 /* Catalog items */
 
