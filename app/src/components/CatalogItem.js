@@ -10,7 +10,7 @@ function CatalogItem({ coffee }) {
       <div style={{ backgroundImage: `url(${coffee.imageUrl})` }}></div>
       <h1> {coffee.name} </h1>
       <p> ${coffee.price} </p>
-      {/* <Link to={`/details/${coffee.id}`}>Details</Link> */}
+      {/* <Link to={`/details/${coffee._id}`}>Details</Link> */}
     </div>
   );
 }

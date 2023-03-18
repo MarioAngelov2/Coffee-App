@@ -13,13 +13,11 @@ import Register from "./pages/Register";
 import Details from "./pages/Details";
 import About from "./pages/About";
 import Logout from "./components/Logout";
+import CreateCoffee from "./components/CreateCoffee";
 
-import { catalogList } from "./helpers/catalogList";
 
 
 function App() {
-
-  const [coffeInfo, setCoffeInfo] = useState(catalogList);
 
   const [auth, setAuth] = useState({})
 
@@ -37,12 +35,13 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog coffeInfo={coffeInfo} />} />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/details/:id" element={<Details coffeInfo={coffeInfo}/>} />
+          <Route path="/details/:id" element={<Details />} />
           <Route path="/about" element={<About />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/create" element={<CreateCoffee />} />
         </Routes>
         <Footer />
       </div>
