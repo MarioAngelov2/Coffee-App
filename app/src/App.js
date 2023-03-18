@@ -14,12 +14,13 @@ import Details from "./pages/Details";
 import About from "./pages/About";
 import Logout from "./components/Logout";
 import CreateCoffee from "./components/CreateCoffee";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 
 
 function App() {
 
-  const [auth, setAuth] = useState({})
+  const [auth, setAuth] = useLocalStorage("auth", {})
 
   const userLogin = (authData) => {
     setAuth(authData)
