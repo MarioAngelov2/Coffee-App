@@ -13,7 +13,7 @@ import Register from "./pages/Register";
 import Details from "./pages/Details";
 import About from "./pages/About";
 import Logout from "./components/Logout";
-import CreateCoffee from "./components/CreateCoffee";
+import CreateCoffee from "./components/CreateItem";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 
