@@ -14,10 +14,6 @@ function Catalog({}) {
     setItem([...item, newItem]);
   };
 
-  // const deleteItem = (itemId) => {
-  //   setItem(item.filter(x => x._id !== itemId))
-  // }
-
   useEffect(() => {
     getAll().then((result) => {
       setItem(result);
