@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { deleteItem } from "../services/deleteService";
 import { useNavigate } from "react-router-dom";
 import { CatalogStateContext } from "../context/DataContext";
+import { AuthContext } from "../context/AuthContext";
 
 import "../styles/ItemModal.css";
 
@@ -15,6 +16,7 @@ import theme from "../theme/theme";
 function ItemModal({ coffee, onClose }) {
   const navigate = useNavigate();
   const { item, setItem } = useContext(CatalogStateContext);
+  const { user } = useContext(AuthContext);
 
   const handleDelete = (itemId) => {
     deleteItem(itemId);
@@ -23,6 +25,8 @@ function ItemModal({ coffee, onClose }) {
     navigate("/catalog");
     onClose();
   };
+
+  const isOwner = user && user._id === item._ownerId;
 
   return (
     <ThemeProvider theme={theme}>
@@ -43,15 +47,26 @@ function ItemModal({ coffee, onClose }) {
               >
                 Close
               </Button>
-              <Button
-                onClick={() => {
-                  handleDelete(coffee._id);
-                }}
-                variant="outlined"
-                startIcon={<DeleteIcon />}
-              >
-                Delete
-              </Button>
+
+              {isOwner ? (
+                <Button
+                  variant="outlined"
+                  startIcon={<DeleteIcon />}
+                  disabled={true}
+                >
+                  Delete
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => {
+                    handleDelete(coffee._id);
+                  }}
+                  variant="outlined"
+                  startIcon={<DeleteIcon />}
+                >
+                  Delete
+                </Button>
+              )}
             </div>
           </div>
         </div>
