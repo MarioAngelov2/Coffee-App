@@ -9,11 +9,13 @@
   font-weight: 300;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .register form {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -21,21 +23,21 @@
 }
 
 .register form input {
-  height: 40px;
+  height: 20px;
   width: 350px;
   border: none;
   color: black;
   outline: none;
 }
 
-#register-form label {
+/* #register-form label {
   margin-top: 10px;
-  margin-bottom: 10px;
-}
+  margin-bottom: 20px;
+} */
 
 .register button {
   font-size: 14px;
-  background-color: white;
+  /* background-color: white; */
   border: none;
   border-radius: 5px;
   transition: 0.2s ease-in-out;
@@ -51,9 +53,9 @@
   height: 30px;
 }
 
-.register button:hover {
+/* .register button:hover {
   background-color: rgb(193, 23, 23);
   border-radius: 5px;
   color: white;
   transition: 0.2s ease-in-out;
-}
+} */

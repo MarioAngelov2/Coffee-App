@@ -51,21 +51,18 @@ function Login() {
           <div className="rightSide">
             <h1>Login</h1>
             <TextField
-              id="outlined-email"
               label="Email"
               type="email"
               inputProps={{ name: "email" }}
               className="email-input"
             />
             <TextField
-              id="outlined-password"
               label="Password"
               type="password"
               inputProps={{ name: "password" }}
               className="password-input"
             />
             <Button
-              onClick={onSubmit}
               className="login-btn"
               type="submit"
               variant="outlined"
