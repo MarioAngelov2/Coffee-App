@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -24,7 +26,7 @@ function Register() {
     const email = formData.get("email");
     const password = formData.get("password");
     const repeatPass = formData.get("re-password");
-    console.log(repeatPass)
+    console.log(repeatPass);
 
     if (password !== repeatPass) {
       alert("Password don't match");
@@ -46,7 +48,10 @@ function Register() {
           method="POST"
           onSubmit={onSubmit}
         >
-          <h1>Register</h1>
+          <Avatar className="avatar">
+            <LockOutlinedIcon />
+          </Avatar>
+          <h1>Sign Up</h1>
           <TextField
             label="Email"
             type="email"
@@ -65,7 +70,7 @@ function Register() {
             className="re-password"
             inputProps={{ name: "re-password" }}
           />
-          <Button className="registerBtn" variant="contained" type="submit">
+          <Button className="registerBtn" variant="outlined" type="submit">
             Sign Up
           </Button>
         </Box>
