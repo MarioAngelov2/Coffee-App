@@ -58,6 +58,13 @@
   background-color: rgb(139, 107, 173);
 }
 
+.loginContainer .redirectSpanLogin {
+  text-decoration: underline;
+  color: rgb(99, 99, 216);
+  cursor: pointer;
+  margin-top: 15px;
+}
+
 /* .loginContainer .rightSide form {
   display: flex;
   flex-direction: column;
@@ -117,4 +124,3 @@
   justify-content: center;
   align-items: center;
 } */
-

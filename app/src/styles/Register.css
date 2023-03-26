@@ -42,6 +42,14 @@
   margin-top: 10px;
 }
 
+.register .redirectSpanRegister {
+  text-decoration: underline;
+  color: rgb(99, 99, 216);
+  cursor: pointer;
+  margin: auto;
+  margin-top: 5px;
+}
+
 /* #register-form label {
   margin-top: 10px;
   margin-bottom: 20px;

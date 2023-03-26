@@ -73,6 +73,7 @@ function Register() {
           <Button className="registerBtn" variant="outlined" type="submit">
             Sign Up
           </Button>
+          <span className="redirectSpanRegister" onClick={() => navigate('/login')}>Already have an account? Sign in</span>
         </Box>
       </div>
     </ThemeProvider>

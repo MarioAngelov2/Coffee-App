@@ -75,6 +75,12 @@ function Login() {
             >
               Login
             </Button>
+            <span
+              className="redirectSpanLogin"
+              onClick={() => navigate("/register")}
+            >
+              Don't have an account? Sign up
+            </span>
           </div>
         </div>
       </Box>
