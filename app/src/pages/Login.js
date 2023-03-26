@@ -4,6 +4,8 @@ import loginImage from "../assets/loginImage.jpeg";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -49,6 +51,9 @@ function Login() {
             style={{ backgroundImage: `url(${loginImage})` }}
           ></div>
           <div className="rightSide">
+            <Avatar className="avatar">
+              <LockOutlinedIcon />
+            </Avatar>
             <h1>Login</h1>
             <TextField
               label="Email"
