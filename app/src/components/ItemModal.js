@@ -6,6 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 
 import "../styles/ItemModal.css";
 
+import AddIcon from '@mui/icons-material/Add';
 import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -38,7 +39,7 @@ function ItemModal({ coffee, onClose }) {
               style={{ backgroundImage: `url(${coffee.imageUrl})` }}
             ></div>
             <h1>{coffee.name}</h1>
-            <p>{coffee.price}</p>
+            <p>${coffee.price}</p>
             <div className="buttons-container">
               <Button
                 variant="outlined"
@@ -67,6 +68,13 @@ function ItemModal({ coffee, onClose }) {
                   Delete
                 </Button>
               )}
+              <Button
+                variant="outlined"
+                className="add-to-cart-btn"
+                startIcon={<AddIcon />}
+              >
+                Add 
+              </Button>
             </div>
           </div>
         </div>
