@@ -33,6 +33,11 @@
   border-radius: 10px;
 }
 
+.modal-container p {
+  font-size: 20px;
+  
+}
+
 .modal-content .buttons-container {
   display: flex;
   flex-direction: row;
