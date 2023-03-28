@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../theme/theme";
+import { theme } from "../theme/theme";
 
 function Register() {
   const { userLogin } = useContext(AuthContext);
@@ -73,7 +73,12 @@ function Register() {
           <Button className="registerBtn" variant="outlined" type="submit">
             Sign Up
           </Button>
-          <span className="redirectSpanRegister" onClick={() => navigate('/login')}>Already have an account? Sign in</span>
+          <span
+            className="redirectSpanRegister"
+            onClick={() => navigate("/login")}
+          >
+            Already have an account? Sign in
+          </span>
         </Box>
       </div>
     </ThemeProvider>

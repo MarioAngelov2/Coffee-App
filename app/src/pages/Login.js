@@ -11,7 +11,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import LoginIcon from "@mui/icons-material/Login";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../theme/theme";
+import { theme } from "../theme/theme";
 
 import * as authService from "../services/authService";
 import { AuthContext } from "../context/AuthContext";

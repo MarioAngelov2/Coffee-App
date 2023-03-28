@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import coffeeLogo from "../assets/coffee-logo.png";
 
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,7 @@ function Navbar() {
       <div className="leftSide">
         <Link to="/">Home</Link>
         <Link to="/catalog">Our Products</Link>
-        <Link to="/about">About</Link>
+        {/* <Link to="/about">About</Link> */}
         {user.email ? (
           <div id="user">
             <Link to="/create">Create Coffee</Link>
@@ -26,7 +27,9 @@ function Navbar() {
           </div>
         )}
       </div>
-      <div className="rightSide"></div>
+      <div className="rightSide">
+        <img src={coffeeLogo} />
+      </div>
     </div>
   );
 }

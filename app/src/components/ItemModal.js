@@ -6,13 +6,13 @@ import { AuthContext } from "../context/AuthContext";
 
 import "../styles/ItemModal.css";
 
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Stack from "@mui/material/Stack";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../theme/theme";
+import { theme } from "../theme/theme";
 
 function ItemModal({ coffee, onClose }) {
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ function ItemModal({ coffee, onClose }) {
                 className="add-to-cart-btn"
                 startIcon={<AddIcon />}
               >
-                Add 
+                Add
               </Button>
             </div>
           </div>
