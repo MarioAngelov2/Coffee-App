@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import coffeeLogo from "../assets/coffee-logo.png";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import { Link } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function Navbar() {
         )}
       </div>
       <div className="rightSide">
-        <img src={coffeeLogo} />
+       <Link to="/cart" className="cartLink"><ShoppingCartIcon className="cartIcon" /> Your Cart</Link>
       </div>
     </div>
   );
