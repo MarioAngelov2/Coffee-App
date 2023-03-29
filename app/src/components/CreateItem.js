@@ -27,6 +27,7 @@ function CreateCoffee() {
 
     createCoffeeService(productData).then((result) => {
       addNewItem(result);
+      alert('successfully created')
       setInputs({
         imageUrl: "",
         name: "",
