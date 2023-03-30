@@ -3,6 +3,7 @@ import { deleteItem } from "../services/deleteService";
 import { useNavigate } from "react-router-dom";
 import { CatalogStateContext } from "../context/DataContext";
 import { AuthContext } from "../context/AuthContext";
+import { ShopContext } from "../context/AddToCartContext";
 
 import "../styles/ItemModal.css";
 
@@ -18,6 +19,7 @@ function ItemModal({ coffee, onClose }) {
   const navigate = useNavigate();
   const { item, setItem } = useContext(CatalogStateContext);
   const { user } = useContext(AuthContext);
+  const { addItemToCart } = useContext(ShopContext);
 
   const handleDelete = (itemId) => {
     deleteItem(itemId);
@@ -28,6 +30,10 @@ function ItemModal({ coffee, onClose }) {
   };
 
   const isOwner = user && user._id === item._ownerId;
+
+  const handleAddToCart = () => {
+    addItemToCart(coffee);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -69,6 +75,7 @@ function ItemModal({ coffee, onClose }) {
                 </Button>
               )}
               <Button
+                onClick={handleAddToCart}
                 variant="outlined"
                 className="add-to-cart-btn"
                 startIcon={<AddIcon />}
