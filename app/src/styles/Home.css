@@ -25,23 +25,18 @@
   font-size: 4.5rem;
 }
 
-.headerContainer button {
-  border: none;
-  color: black;
-  background-color: white;
+.headerContainer .orderBtn {
+  text-decoration: none;
   cursor: pointer;
   justify-content: center;
-  height: 50px;
-  width: 150px;
-  border-radius: 5px;
+  height: 60px;
+  width: 180px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1em;
   transition: 0.2s ease-in-out;
 }
 
-.headerContainer button:hover {
-  background-color: rgb(193, 23, 23);
-  border-radius: 5px;
+.headerContainer .orderBtn:hover {
   color: white;
   transition: 0.2s ease-in-out;
 }
