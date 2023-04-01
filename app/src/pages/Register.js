@@ -26,7 +26,6 @@ function Register() {
     const email = formData.get("email");
     const password = formData.get("password");
     const repeatPass = formData.get("re-password");
-    console.log(repeatPass);
 
     if (password !== repeatPass) {
       alert("Password don't match");
