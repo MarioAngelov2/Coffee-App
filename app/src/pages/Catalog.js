@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { DataContext } from "../context/DataContext";
 import { CatalogStateContext } from "../context/DataContext";
 import { getAll } from "../services/getService";
+import Cart from "./Cart";
 
 import CatalogItem from "../components/CatalogItem";
 import "../styles/Catalog.css";
